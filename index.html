@@ -1,9 +1,28 @@
 <html>
         <head>
                 
-                <title>Pets4U</title>
+                <title>Pets</title>
                 <link rel="stylesheet" href="java h.html">
                 <link rel="stylesheet" href="styles.css">
+                
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+                <script>
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+                        // Create gradient
+                        var grd = ctx.createLinearGradient(0,0,200,0);
+                        grd.addColorStop(0,"red");
+                        grd.addColorStop(1,"white");
+                        // Fill with gradient
+                        ctx.fillStyle = grd;
+                        ctx.fillRect(10,10,150,80);
+                </script>
+                        
+                
+                
+                
+                        
         </head>
         <body>
 

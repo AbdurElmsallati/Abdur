@@ -2,6 +2,10 @@ body {
   background-color: rgb(240, 248, 243);
   color: greenyellow;
 }
+canvas {
+  background-color: rgb(23, 163, 70);
+  color: rgb(17, 224, 45);
+} 
 
 h1 {
   background-color: orange;
