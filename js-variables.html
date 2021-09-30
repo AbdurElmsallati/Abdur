@@ -18,7 +18,7 @@ console.log("available ?",available);
 
 
  let name="Abdur"
- let age=15
+ let age=155
 
  if(name == "Abdur" && age >= 18) {
    console.log("Abdur is old enough of a drink")
@@ -26,12 +26,33 @@ console.log("available ?",available);
    console.log("Abdur is to young too drink")
 }
 
-var password="Enter password"
-var logs= 64
+let password="Enter password"
+let logs= 64
 if(password == "Enter password"  && logs >= 8) {
   console.log("strong password")
 } else {
   console.log("password is weak")
 }
+
+const myFunction = () => {
+  console.log ("Hello World")
+  console.log ("Hello Again");
+}
+   myFunction();
+   myFunction();
+
+
+let coffeeIsGrinding = true;
+
+const pressGrindBeans = () =>{
+  if (coffeeIsGrinding) {
+    console.log("Stopping the grind");
+    coffeeIsGrinding = false;
+  } else {
+    console.log("Grinding is about to begin");
+    coffeeIsGrinding = true;
+  }
+}
+pressGrindBeans()
 
 </script>
