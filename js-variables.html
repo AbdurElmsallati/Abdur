@@ -1,0 +1,85 @@
+<script>
+
+    //these are my variables 
+var petName = "dog";
+var price = 15;
+var breed = "BullDog";
+var available = true;
+
+   //cost of dogs 
+
+price = price * 10;
+
+  //displaying my code in console 
+console.log("dog £"+price);
+console.log(petName);
+console.log(breed)
+console.log("available ?",available);
+
+
+ let name="Abdur"
+ let age=155
+
+ if(name == "Abdur" && age >= 18) {
+   console.log("Abdur is old enough of a drink")
+ } else {
+   console.log("Abdur is to young too drink")
+}
+
+let password="Enter password"
+let logs= 64
+if(password == "Enter password"  && logs >= 8) {
+  console.log("strong password")
+} else {
+  console.log("password is weak")
+}
+
+const myFunction = () => {
+  console.log ("Hello World")
+  console.log ("Hello Again");
+}
+   myFunction();
+   myFunction();
+
+
+let coffeeIsGrinding = true;
+
+const pressGrindBeans = () =>{
+  if (coffeeIsGrinding) {
+    console.log("Stopping the grind");
+    coffeeIsGrinding = false;
+  } else {
+    console.log("Grinding is about to begin");
+    coffeeIsGrinding = true;
+  }
+}
+pressGrindBeans()
+ 
+const cashWtihdrawal = (amount,accnum) => {
+  console.log(`Withdrawing ${amount} from account ${accnum}`);
+}
+ 
+cashWtihdrawal(300,849314)
+cashWtihdrawal(93,87523875)
+cashWtihdrawal(423,4356246)
+
+let dog = 12
+let fish = 23
+let cat = 15
+let bird = 10
+
+const returnFunct = (dog, fish, cat, bird) =>{
+  return dog + fish + cat + bird 
+}
+
+console.log (returnFunct(dog, fish, cat, bird));
+
+let items= 0;
+
+const basket=(pet)=>{
+  console.log(`add to basket ${pet}`);
+}
+ basket("cat");
+ basket("fish");
+ basket("bird");
+</script>
