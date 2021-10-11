@@ -23,3 +23,28 @@
   price : 35
     }
 };
+// Cats products //
+var petProduct = {
+  cat1: {
+breed : "Ginger",
+desc : "",
+image : "",
+price : 10
+
+},
+
+dog2: {
+breed : "White",
+desc : "",
+image : "",
+price : 32
+
+},
+
+dog3: {
+breed : "Black",
+desc : "",
+image : "",
+price : 23
+}
+};
