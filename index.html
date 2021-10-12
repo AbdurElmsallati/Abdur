@@ -8,7 +8,8 @@
    <link rel="stylesheet" href="index.home.page.css">
    <!-- Latest compiled JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>  
-   </head>
+   
+</head>
     <!-- Body size-->
 <body style="height: 3000px"><div class="container-fluid mt-3"></div>
 
@@ -85,23 +86,25 @@
    </div>
    
    <!-- The slideshow/carousel -->
+
+  <!--"PETS" carousel-->
    <div class="carousel-inner">
-     <div class="carousel-item">
-       <img src="57965.jpg" alt="Pets" class="d-block" style="width:100%" width="2000" height="700">
+     <div class="carousel-item active">
+       <img src="57965.jpg" alt="Pets" class="d-block" style="width:100%" >
        <div class="carousel-caption">
        <h3>Dogs</h3>
        <p>Dogs,dogs,dogs</p>
      </div>
      </div>
      <div class="carousel-item active">
-       <img src="57965.jpg" alt="Pet Food" class="d-block" style="width:100%" width="2000" height="700">
+       <img src="57965.jpg" alt="Pet Food" class="d-block" style="width:100%" >
        <div class="carousel-caption">
        <h3>Cats,</h3>
        <p>Cats,cats,cats</p>
      </div>
    </div>
      <div class="carousel-item">
-       <img src="57965.jpg" alt="accessories" class="d-block" style="width:100%" width="2000" height="700">
+       <img src="57965.jpg" alt="accessories" class="d-block w-100">
        <div class="carousel-caption">
         <button class="fishButton">Fish button</button>
      <p>Fish,fish,fish</p>
@@ -122,12 +125,46 @@
 <!--pet food and accessories images side by side-->
 <div class="row">
    <div class="column">
-     <img src="pets.jpg" alt="pet food " style="width:100%">
+     <img src="pets.jpg" alt="pet food " width="500" height="400">
      <button class="btn">Button</button>
    </div>
    <div class="column">
-     <img src="pets.jpg" alt="pet accessories" style="width:100%">
+     <img src="pets.jpg" alt="pet accessories" width="500" height="400">
      </div>
    </div>
+
+
+ <!--Validation-->
+ <script>
+  // Validation for Forename//
+  function validateForm() {
+    let x = document.forms["InfoForm"]["Fname"].value;
+    if (x == "") {
+      alert("Forename MUST be filled out");
+      return false;
+    }
+  }
+  </script>
+
+
+   <!--FORM-->
+   <div class=" border border-secondary text-left">
+<form name="InfoForm" onsubmit="return validateForm()">
+  <!--Forname-->
+  <div class="col-2">Forename<input type="text" name="Fname" ></div> 
+  <!--Surename-->
+  <div class="col-2">Surename<input type="text" name="Sname" required>
+  <!--Email-->
+  <div class="col-2">Email<input type="text" name="Email" required ></div>
+  <!--Extra Info-->
+  <div class="col-2">Extra Info<input type="text" name="Extra info" required></div>
+  <!--Submit button-->
+  <div class="col-2"><input type="submit" value="Submit"></div>
+    
+  </div>
+</form>
+
+</div>
+
  </body>
 </head>

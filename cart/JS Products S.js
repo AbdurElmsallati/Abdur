@@ -27,23 +27,50 @@
 var petProduct = {
   cat1: {
 breed : "Ginger",
-desc : "",
+desc : "Awsome ginger cat",
 image : "",
-price : 10
+price : 15
 
 },
 
-dog2: {
+cat2: {
 breed : "White",
-desc : "",
+desc : "Very active cat",
 image : "",
-price : 32
+price : 20
 
 },
 
-dog3: {
+cat3: {
 breed : "Black",
-desc : "",
+desc : "parkour master",
+image : "",
+price : 23
+}
+};
+
+//Fish products //
+
+var petProduct = {
+  Fish1: {
+breed : "Gold",
+desc : "A small shiny gold fish",
+image : "",
+price : 15
+
+},
+
+cat2: {
+breed : "Panda Telescope",
+desc : "This fish is black and white like a panda!",
+image : "",
+price : 20
+
+},
+
+cat3: {
+breed : "Black Moor",
+desc : "Cool fish with funny eyes",
 image : "",
 price : 23
 }

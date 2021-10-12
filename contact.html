@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // Validation for Forename//
+        function validateForm() {
+          let x = document.forms["InfoForm"]["Fname"].value;
+          if (x == "") {
+            alert("Forename MUST be filled out");
+            return false;
+          }
+        }
+    </script>
+</head>
+<body>
+    <form name="InfoForm" onsubmit="return validateForm()">
+        <div class="col-2">Forename<input type="text" name="Fname"></div> 
+        <div class="col-2">Surename<input type="text" name="Sname" required>
+        <div class="col-2">Email<input type="text" name="Email"></div>
+        <div class="col-2">Extra Info<input type="text" name="Extra info"></div>
+        <div class="col-2"><input type="submit" value="Submit"></div>
+      </form>
+</body>

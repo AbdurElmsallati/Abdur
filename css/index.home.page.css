@@ -42,4 +42,9 @@
   
   .container .fishButton:hover {
     background-color: black;
-  }
+  } 
+  
+.StyleForm {
+  padding: 25px 50px;
+  background-color: blue;
+}
