@@ -75,7 +75,7 @@ function setItems(product) {
                     [product.tag]: product
                 }
             }
-            cartItems[products.tag].inCart +=1;
+            cartItems[products.tag].inCart += 1;
         } else {
             product.inCart = 1;
             cartItems = {
