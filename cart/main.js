@@ -63,15 +63,29 @@ function cartNumbers(product) {
 }
 
 function setItems(product) {
-        console.log("Inside of SetItems functions");
-        console.log("My products is", product);
-        product.inCart = 1;
+       let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems)
+        console.log("My cartItems are", carItems);
 
-        let cartItems = {
+        if(cartItems != null){
+            
+            if(cartItems[products.tag] == undefined){
+                cartItems = {
+                    ...cartItems,
+                    [product.tag]: product
+                }
+            }
+            cartItems[products.tag].inCart +=1;
+        } else {
+            product.inCart = 1;
+            cartItems = {
             [product.tag]: product
         }
+       
+        }
         
-        localStorage.setItem("productsInCart", cartItems);
+        localStorage.setItem("productsInCart", JSON.stringify
+        (cartItems));
 }
 
 
