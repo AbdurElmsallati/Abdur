@@ -4,28 +4,28 @@ let products = [
     {
         name: 'Cat 1',
         tag: 'Big Cat 1',
-        price: 25,
+        price: 10,
         inCart: 0
     },
 
     {
         name: 'Cat 2',
         tag: 'Big Cat 2',
-        price: 25,
+        price: 20,
         inCart: 0
     },
 
     {
         name: 'Cat 3',
         tag: 'Big Cat 3',
-        price: 25,
+        price: 30,
         inCart: 0
     },
 
     {
         name: 'Cat 4',
         tag: 'Big Cat 4',
-        price: 25,
+        price: 40,
         inCart: 0
     },
 ]
@@ -33,7 +33,9 @@ let products = [
 for (let i=0; i < carts.length; i++) {
     carts[i].addEventListener('click',() => {
         cartNumbers(products[i]);
+        totalCost(products[i])
     })
+    
     
 }
 
@@ -64,18 +66,18 @@ function cartNumbers(product) {
 
 function setItems(product) {
        let cartItems = localStorage.getItem('productsInCart');
-        cartItems = JSON.parse(cartItems)
+        cartItems = JSON.parse(cartItems);
         
 
         if(cartItems != null){
             
-            if(cartItems[products.tag] == undefined){
+            if(cartItems[product.tag] == undefined){
                 cartItems = {
                     ...cartItems,
                     [product.tag]: product
                 }
             }
-            cartItems[products.tag].inCart += 1;
+            cartItems[product.tag].inCart += 1;
         } else {
             product.inCart = 1;
             cartItems = {
@@ -86,6 +88,24 @@ function setItems(product) {
         
         localStorage.setItem("productsInCart", JSON.stringify
         (cartItems));
+}
+
+function totalCost (products){ 
+    // console.log("The price of the dog", products.price);
+    let cartCost = localStorage.getItem('totalCost');
+    
+    console.log("My cart cost is", cartCost);
+    console.log(typeof cartCost );
+
+    if(cartCost != null){
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + products.price);
+    } else {
+        localStorage.setItem("totalCost", products.price);
+    }
+ 
+localStorage.setItem("totalCost", products.price);
+
 }
 
 
