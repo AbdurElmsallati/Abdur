@@ -89,12 +89,12 @@ function setItems(product) {
         (cartItems));
 }
 
-//function totalCost (product){ 
-     //console.log("The price of the dog", products.price);
-   // let cartCost = localStorage.getItem('totalCost');
+function totalCost (product){ 
+     console.log("The price of the dog", product.price);
+     //let cartCost = localStorage.getItem('totalCost');
     
-   // console.log("My cart cost is", cartCost);
-   // console.log(typeof cartCost );
+     //console.log("My cart cost is", cartCost);
+     // console.log(typeof cartCost );
 
    // if(cartCost != null){
       //  cartCost = parseInt(cartCost);
