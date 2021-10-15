@@ -90,7 +90,7 @@ function setItems(product) {
 }
 
 function totalCost (product){ 
-     console.log("The price of the dog", product.price);
+     console.log("The price of the dog", product.price); }
      //let cartCost = localStorage.getItem('totalCost');
     
      //console.log("My cart cost is", cartCost);
