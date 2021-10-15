@@ -89,16 +89,20 @@ function setItems(product) {
         (cartItems));
 }
 
+
+
+
+
 function totalCost (product){ 
      console.log("The price of the dog", product.price); 
      let cartCost = localStorage.getItem('totalCost');
-    
+      cartCost = parseInt(cartCost);
       console.log("My cartCost is", cartCost);
       console.log(typeof cartCost );
 
     if(cartCost != null){
-     cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + product.price);
+     
+     localStorage.setItem("totalCost", cartCost + product.price);
     } else {
         localStorage.setItem("totalCost", product.price);
     }
