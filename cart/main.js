@@ -1,6 +1,6 @@
 let carts = document.querySelectorAll('.add-cart');
 
-let products = [
+let product = [
     {
         name: 'Cat 1',
         tag: 'Big Cat 1',
@@ -90,7 +90,7 @@ function setItems(product) {
         (cartItems));
 }
 
-function totalCost (products){ 
+function totalCost (product){ 
     // console.log("The price of the dog", products.price);
     let cartCost = localStorage.getItem('totalCost');
     
@@ -99,12 +99,12 @@ function totalCost (products){
 
     if(cartCost != null){
         cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + products.price);
+        localStorage.setItem("totalCost", cartCost + product.price);
     } else {
-        localStorage.setItem("totalCost", products.price);
+        localStorage.setItem("totalCost", product.price);
     }
  
-localStorage.setItem("totalCost", products.price);
+localStorage.setItem("totalCost", product.price);
 
 }
 
