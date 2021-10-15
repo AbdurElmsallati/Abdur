@@ -50,7 +50,7 @@
 }
 
 .Title  {
-  color: blue; 
   padding-right: 50px;
   padding-left: 50px; 
+  background-color: blue;
 }
