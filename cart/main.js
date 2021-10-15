@@ -1,6 +1,6 @@
 let carts = document.querySelectorAll('.add-cart');
 
-let product = [
+let products = [
     {
         name: 'Cat 1',
         tag: 'Big Cat 1',
@@ -32,8 +32,7 @@ let product = [
 
 for (let i=0; i < carts.length; i++) {
     carts[i].addEventListener('click',() => {
-        cartNumbers(product[i]);
-        totalCost(product[i])
+        totalCost(products[i])
     })
     
     
