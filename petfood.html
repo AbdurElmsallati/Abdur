@@ -6,30 +6,27 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
    <!--Home page stylesheet-->
    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/contact us.css">
+   <link rel="stylesheet" href="cart.css">
    <!-- Latest compiled JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>  
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  
 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
      
 </head>
     <!-- Body size-->
-<body style="height: 1000px"><div class="container-fluid mt-3"></div>
+<body style="height: 3000px"><div class="container-fluid mt-3"></div>
 
    <!-- Fixed Navigation bar scroller-->
        <title>Home page</title>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-     
-
+<!-- nav bar-->
          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-              <img src="img/57965.jpg" alt="pets Logo" style="width:80px;" class="rounded-pill">  
+              <img src="img/57965.jpg"  alt="pets Logo" style="width:80px;" class="rounded-pill">  
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
@@ -47,8 +44,9 @@
             </ul>
           </div>
         </div> -->
-           <!--Link for pet food-->
-           <ul class="navbar-nav">
+        
+          <!--Link for pet food-->
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="petfood.html">Pet Food</a>
             </li>
@@ -72,79 +70,3 @@
 </ul> 
 
   </nav>  
-
-<!--<script>
-$(".btn").click(function(){
-  $(".input, .area").val("");
-});
-</script> -->
-
-
-
-<!--Validation-->
-<script>
-  // Validation for Forename//
-  function validateForm() {
-    let x = document.forms["InfoForm"]["name"].value;
-    if (x == "") {
-      alert("Name MUST be filled out");
-      return false;
-    }
-  }
-</script>
-
-<!--Validation-->
-<script>
-  // Validation for Forename//
-  function validateForm() {
-    let x = document.forms["InfoForm"]["email"].value;
-    if (x == "") {
-      alert("EMAIL MUST be filled out");
-      return false;
-    }
-  }
-</script>
-
-
-<!--Validation-->
-<script>
-  // Validation for Forename//
-  function validateForm() {
-    let x = document.forms["InfoForm"]["subject"].value;
-    if (x == "") {
-      alert("Subject MUST be filled out");
-      return false;
-    }
-  }
-</script>
-
-
-
-<!--FORM-->
-<form name="InfoForm" onsubmit="return validateForm()">
-  <div class="container">
-    <p>CONTACT US</p>
-    
-    <div class="login">
-      <input type="text" placeholder="Your Name"  class="input" name="name">
-      <input type="text" placeholder="Your Email Address"  class="input" name="email">
-    </div>
-    
-  
-    <div class="subject">
-      <input type="text" placeholder="Subject" class="input" name="subject" required>
-    </div>
-    
-   <!--message-->
-  
-   <div class="msg">
-    <textarea  class="area" placeholder="Leave a Message"></textarea>
-  </div>
-    
-  <div class="btn"><input type="submit" value="Submit"></div> 
-  </div>
-</form>
-
-</body>
-</html>
-</header>
