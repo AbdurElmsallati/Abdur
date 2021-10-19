@@ -102,7 +102,7 @@ function totalCost (product){
 
     if(cartCost != null){
      cartCost = parseInt(cartCost);
-     localStorage.setItem("totalCost", cartCost + product.price);
+     localStorage.setItem("totalCost", cartCost =+ product.price);
     } else {
         localStorage.setItem("totalCost", product.price);
     }
