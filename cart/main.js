@@ -9,8 +9,8 @@ let products = [
     },
 
     {
-        name: 'Cat 2',
-        tag: 'Big Cat 2',
+        name: 'Cat 21',
+        tag: 'Big Cat 21',
         price: 20,
         inCart: 0
     },
