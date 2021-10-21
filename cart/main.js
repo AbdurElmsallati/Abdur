@@ -107,7 +107,7 @@ function totalCost (product){
         localStorage.setItem("totalCost", product.price);
     }
  
-localStorage.setItem("totalCost", product.price);
+//localStorage.setItem("totalCost", product.price);
 
 }
 
