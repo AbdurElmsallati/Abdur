@@ -126,6 +126,11 @@ function displayCart() {
             </div>
             <div class="price">${item.price}</div>
             <div class="quantity">
+               <ion-icon class="decrease" 
+               name="caret-back-circle"></ion-icon>
+               <span>${item.inCart}</span>
+               <ion-icon class="decrease" 
+               name="caret-back-circle"></ion-icon>
             </div>
         `    
         });

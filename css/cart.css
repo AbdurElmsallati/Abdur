@@ -1,4 +1,22 @@
 * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -75,10 +93,18 @@ nav a{
 
 .price {
     width: 15%;
-    border-bottom: 4px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
 }
+
+.quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
 
 .total {
     width: 10%;
