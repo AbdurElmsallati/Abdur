@@ -85,29 +85,6 @@ $(".btn").click(function(){
 
 
 
-<!--Validation-->
-<script>
-  // Validation for Forename//
-  function validateForm() {
-    let x = document.forms["InfoForm"]["name"].value;
-    if (x == "") {
-      alert("Name MUST be filled out");
-      return false;
-    }
-  }
-</script>
-
-<!--Validation-->
-<script>
-  // Validation for Forename//
-  function validateForm() {
-    let x = document.forms["InfoForm"]["email"].value;
-    if (x == "") {
-      alert("EMAIL MUST be filled out");
-      return false;
-    }
-  }
-</script>
 
 
 <!--Validation-->
@@ -130,8 +107,8 @@ $(".btn").click(function(){
     <p>CONTACT US</p>
     
     <div class="login">
-      <input type="text" placeholder="Your Name"  class="input" name="name">
-      <input type="text" placeholder="Your Email Address"  class="input" name="email">
+      <input type="text" placeholder="Your Name"  class="input" name="name" required>
+      <input type="text" placeholder="Your Email Address"  class="input" name="email" required>
     </div>
     
   
@@ -142,10 +119,10 @@ $(".btn").click(function(){
    <!--message-->
   
    <div class="msg">
-    <textarea  class="area" placeholder="Leave a Message"></textarea>
+    <textarea  class="area" placeholder="Leave a Message" required></textarea>
   </div>
     
-  <div class="btn"><input type="submit" value="Submit"></div> 
+  <div class="btn"><input type="submit" value="Submit" required></div> 
   </div>
 </form>
 
