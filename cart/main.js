@@ -1,57 +1,45 @@
 let carts = document.querySelectorAll('.add-cart');
 
-// List of products variables
 let products = [ 
-
     {
-    //Cat 1 name,tag,price are string variables 
-        name: "Cat 1",
-        tag: "Cat 1",
+        name: "Cat",
+        tag: "cat",
         price: 15,
-    //Incart is a number variable 
         inCart: 0
     },
     {
-    //Cat 1 name,tag,price are string variables 
-        name: "Cat 2",
-        tag: "Cat 2",
+        name: "Dog",
+        tag: "dog",
         price: 20,
-    //Incart is a number variable 
         inCart: 0
     },
     {
-    //Cat 1 name,tag,price are string variables 
-        name: "Cat 3",
-        tag: "Cat 3",
+        name: "Bird",
+        tag: "bird",
         price: 15,
-    //Incart is a number variable 
         inCart: 0
     },
     {
-    //Cat 1 name,tag,price are string variables 
-        name: "Cat 4",
-        tag: "Cat 4",
+        name: "Hamster",
+        tag: "hamster",
         price: 20,
-    //Incart is a number variable 
         inCart: 0
     }
 ];
 
-//
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
         totalCost(products[i]);
     });
 }
-// The function to load items on local storage
+
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     if( productNumbers ) {
         document.querySelector('.cart span').textContent = productNumbers;
     }
 }
- 
 
 function cartNumbers(product, action) {
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -75,7 +63,8 @@ function cartNumbers(product, action) {
 }
 
 function setItems(product) {
-
+    // let productNumbers = localStorage.getItem('cartNumbers');
+    // productNumbers = parseInt(productNumbers);
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 
@@ -130,16 +119,16 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += 
-            `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./img/${item.tag}.jpg" />
+            `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./images/${item.tag}.jpg" />
                 <span class="sm-hide">${item.name}</span>
             </div>
-            <div class="price sm-hide">£${item.price}.00</div>
+            <div class="price sm-hide">${item.price}.00</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
                     <span>${item.inCart}</span>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
-            <div class="total">£${item.inCart * item.price}.00</div>`;
+            <div class="total">${item.inCart * item.price}.00</div>`;
         });
 
         productContainer.innerHTML += `
@@ -193,8 +182,7 @@ function manageQuantity() {
         });
     }
 }
- 
-//function for deleteButtom
+
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
     let productNumbers = localStorage.getItem('cartNumbers');
