@@ -110,9 +110,26 @@ function totalCost (product){
 
 function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
-  cartItems = JSON.parse(cartItem);
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector
+  ("products");
 
-  console.log(cartItems)
+  console.log(cartItems);
+  if ( cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="product">
+               <ion-icon name="close-circle"></ion-icon> 
+                <img src="./img/${item.tag}.jpg">
+                <span>${item.name}</span>
+            </div>
+            <div class="price">${item.price}</div>
+            <div class="quantity">
+            </div>
+        `    
+        });
+  }
 }
 
 onLoadCartNumbers();
