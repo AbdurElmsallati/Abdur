@@ -1,32 +1,42 @@
 let carts = document.querySelectorAll('.add-cart');
-
+//Variable for my pet products
 let products = [ 
     {
+//name,tag and price are string variable 
         name: "Cat",
         tag: "cat",
         price: 15,
+//inCart is a integer variable 
         inCart: 0
     },
     {
+//name,tag and price are string variable
         name: "Dog",
         tag: "dog",
         price: 20,
+//inCart is a integer variable 
         inCart: 0
     },
     {
+//name,tag and price are string variable
         name: "Bird",
         tag: "bird",
         price: 15,
+//inCart is a integer variable 
         inCart: 0
     },
     {
+//name,tag and price are string variable
         name: "Hamster",
         tag: "hamster",
         price: 20,
+//inCart is a integer variable 
         inCart: 0
     }
 ];
+ 
 
+// Function for selecting and clicking products 
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
@@ -34,6 +44,7 @@ for(let i=0; i< carts.length; i++) {
     });
 }
 
+// Function for loading items in local storage 
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     if( productNumbers ) {
@@ -41,10 +52,12 @@ function onLoadCartNumbers() {
     }
 }
 
+// Function for the cart item number 
 function cartNumbers(product, action) {
+// Variable for adding the cartNumbers to local storage 
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
-
+//Variable for adding products to local storage 
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 
@@ -89,9 +102,10 @@ function setItems(product) {
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
 
+//Function for calculating the total cost
 function totalCost( product, action ) {
     let cart = localStorage.getItem("totalCost");
-
+//If function for calculating cart
     if( action) {
         cart = parseInt(cart);
 
@@ -106,6 +120,8 @@ function totalCost( product, action ) {
     }
 }
 
+
+//Function for displaying cartItems
 function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -119,6 +135,7 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += 
+//*Div for products with ioncon//
             `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./images/${item.tag}.jpg" />
                 <span class="sm-hide">${item.name}</span>
             </div>
@@ -141,7 +158,8 @@ function displayCart() {
         manageQuantity();
     }
 }
-
+ 
+// Function for adding for decreasing products  
 function manageQuantity() {
     let decreaseButtons = document.querySelectorAll('.decrease');
     let increaseButtons = document.querySelectorAll('.increase');
@@ -149,7 +167,7 @@ function manageQuantity() {
     let currentProduct = '';
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-
+// For function for adding products 
     for(let i=0; i < increaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', () => {
             console.log(cartItems);
@@ -157,7 +175,7 @@ function manageQuantity() {
             console.log(currentQuantity);
             currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
             console.log(currentProduct);
-
+// If variable for dedcreasing products 
             if( cartItems[currentProduct].inCart > 1 ) {
                 cartItems[currentProduct].inCart -= 1;
                 cartNumbers(cartItems[currentProduct], "decrease");
@@ -166,7 +184,7 @@ function manageQuantity() {
                 displayCart();
             }
         });
-
+// Function for increase 
         increaseButtons[i].addEventListener('click', () => {
             console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
@@ -182,7 +200,7 @@ function manageQuantity() {
         });
     }
 }
-
+//Function for deleting item
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
     let productNumbers = localStorage.getItem('cartNumbers');
