@@ -118,7 +118,7 @@
      <div class="carousel-item">
 <!--Link to fish item page-->
       <a href="Cart page.html">
-       <img src="img/fish.jpg" alt="fish" class="d-block w-100" width="2000" height="500">
+       <img src="img/fish.jpg" alt="fish" class="d-block w-100" class="d-block w-100" width="2000" height="500">
        </a>
        <div class="carousel-caption">
         <h3>Fish</h3>
@@ -135,15 +135,37 @@
     </button>
   </div>
 
-<!-- pet food and accessories-->
-  <div class="row">
-    <div class="column">
-      <img src="img_snow.jpg" alt="Snow" style="width:100%">
-    </div>
-    <div class="column">
-      <img src="img_forest.jpg" alt="Forest" style="width:100%">
-    </div>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
 
+<!-- pet food and accessories-->
+    </div>
+    <div class="column">
+      <img src="img/cat.jpg" alt="Forest" style="width:100%" width="1000" height="250" >
+    </div> 
+
+  </div>
+  <div class="column">
+    <img src="img/dogs.jpg" alt="Forest" style="width:100%" width="1000" height="250"  >
+  </div>
+
+ 
 
  
 <!--link for ionicaons-->
